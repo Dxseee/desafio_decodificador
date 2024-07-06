@@ -9,10 +9,19 @@ body{
     height: 100vh;
     background-color: #F3F5FC;
 }
-.icon_principal{
-    margin: 40px;
+
+.icone_principal{
+    width: 120px;
+    height: 48px;
+
 }
 .container_Pai{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 40px;
+}
+.container_Principal{
     display: flex;
     gap:80px;
     justify-content: center;
@@ -36,11 +45,22 @@ body{
 ::placeholder{
     color: #0A3871;
 }
+
+.container1__inferior{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 16px;
+}
+
 .container1__aviso{
     font-family: "Inter", sans-serif;
     font-weight: 400;
     font-size: 12px;
     color: #495057;
+    display: flex;
+    gap: 8px;
+    
 }
 .container1__botoes{
     display: flex;
@@ -80,6 +100,7 @@ body{
     border-radius: 32px;
     box-shadow: 0px 24px 32px 8%;
     gap: 40px;
+    margin: 0px 40px 40px 0px;
     
     
 }
