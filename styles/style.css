@@ -1,4 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
 }
+
+body{
+    height: 100vh;
+    background-color: #F3F5FC;
+}
+.icon_principal{
+    margin: 40px;
+}
+.container_Pai{
+    display: flex;
+    gap:80px;
+    justify-content: center;
+}
+.container1{
+    margin: 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+}
+.container1__caixa_de_escrita{
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    color: #0A3871;
+    outline: none;
+    border: none;
+    background-color: #F3F5FC;
+}
+::placeholder{
+    color: #0A3871;
+}
+.container1__aviso{
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: #495057;
+}
+.container1__botoes{
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    text-align: center;
+}
+
+.container1_botoes__criptografar{
+    width: 328px;
+    text-decoration: none;
+    background-color: #0A3871;
+    border-radius: 24px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    color: white;
+    padding: 24px;
+
+}
+.container1_botoes__descriptografar{
+    width: 328px;
+    text-decoration: none;
+    background-color: #D8DFE8;
+    border: 1px #0A3871;
+    border-style: solid ;
+    border-radius: 24px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    color: #0A3871;
+    padding: 24px;
+}
+
+.container2{
+    background-color: white;
+    width: 400px;
+    height: 944px;
+    border-radius: 32px;
+    box-shadow: 0px 24px 32px 8%;
+    gap: 40px;
+    
+    
+}
+
+.container2__agrupamento{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+}
+
+.container2__agrupamento__imagem_principal{
+    width: 336px;
+    height: 304px;
+    margin-top: 243px;
+}
+.container2__agrupamento__textos{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 16px;
+    margin:32px ;
+}
+.container2__agrupamento__texto1{
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    color: #343A40;
+    font-size: 24px;
+    text-align: center;
+}
+
+.container2__agrupamento__texto2{
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    color: #495057;
+    font-size: 16px;
+    text-align: center;
+}
+
