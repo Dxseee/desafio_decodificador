@@ -8,24 +8,24 @@
     <title>Desafio Decodificador</title>
 </head>
 <body>
-    <main class="=container_Pai"> 
+    <main class="container_Pai"> 
         <section class="container_Principal">
             <img class="icone_principal" src="/img/Frame 6icon_decodificador.png" alt="Icone do Decodificador">
             <section class="container1">
-                <textarea class="container1__caixa_de_escrita" rows="15" placeholder="Digite seu Texto" autocapitalize="sentences" name="" id=""></textarea>
+                <textarea id="campoTexto" class="container1__caixa_de_escrita" rows="15" placeholder="Digite seu Texto" autocapitalize="sentences" name="" id=""></textarea>
                 
                 <div class="container1__inferior">
                     <p class="container1__aviso"><img src="/img/icon_exclamacao_decodificador.png" alt="icone de aviso">Apenas letras minúsculas e sem acento.</p>
                     
                     <div class="container1__botoes">
-                        <a class="container1_botoes__criptografar" href="">Criptografar</a>
-                        <a class="container1_botoes__descriptografar" href="">Descriptografar</a>
+                        <button onclick="criptografar()" id="botao_1" class="container1_botoes__criptografar" >Criptografar</button>
+                        <button onclick="descriptografar()" id="botao_2" class="container1_botoes__descriptografar" disabled>Descriptografar</button>
                     </div>
                 </div>
             </section>
             <section class="container2">
                 <div class="container2__agrupamento">
-                    <img class="container2__agrupamento__imagem_principal" src="/img/Imagem_principal.png" alt="Mulher olhando um diamante com uma lupa">
+                    <img id="imagem" class="container2__agrupamento__imagem_principal" src="/img/Imagem_principal.png" alt="Mulher olhando um diamante com uma lupa">
 
                     <div class="container2__agrupamento__textos">
                         <h1 class="container2__agrupamento__texto1">Nenhuma mensagem encontrada</h1>
