@@ -42,9 +42,11 @@ function descriptografar(){
 function removerElements(parametro){
     let elementImagem = document.getElementById("imagem");
 
-    let criarElementTexto = document.createElement("h1");
+    let criarElementTexto = document.createElement("textarea");
     criarElementTexto.classList.add('h1TextoCriptografado');
     criarElementTexto.innerHTML = parametro;
+    criarElementTexto.setAttribute("row","15");
+    criarElementTexto.setAttribute("placeholder","Nenhuma mensagem");
     elementImagem.replaceWith(criarElementTexto);
 
     let criarElementButton =  document.createElement("button");
