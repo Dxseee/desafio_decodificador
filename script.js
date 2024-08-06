@@ -50,7 +50,7 @@ function mudarElements(){
     let elementImagem = document.getElementById("imagem");
     let criarElementTexto = document.createElement("textarea");
     criarElementTexto.classList.add('h1TextoCriptografado');
-    criarElementTexto.setAttribute("rows","30");
+    criarElementTexto.setAttribute("rows","20");
     criarElementTexto.setAttribute("placeholder","Nenhuma mensagem");
     criarElementTexto.setAttribute("id","campoCriptografado")
     elementImagem.replaceWith(criarElementTexto);
@@ -64,6 +64,8 @@ function mudarElements(){
     let criarElementButton =  document.createElement("button");
     criarElementButton.classList.add("buttonCriado");
     criarElementButton.innerHTML = "Copiar";
+    criarElementButton.setAttribute("onclick","copyButton()")
+    criarElementButton.setAttribute("id","copyButton")
     elementTexto1.replaceWith(criarElementButton);
 
     let removerText = document.getElementById("texto2").remove();
@@ -77,6 +79,13 @@ function innerText(parametro){
     colocarTexto.innerHTML = parametro;
 }
 
+
+function copyButton(){
+    document.getElementById('copyButton').addEventListener('click', clipboardCopy);
+    async function clipboardCopy() {
+      await navigator.clipboard.writeText(textCriptografado);
+    }
+}
 /*Tentativa 1 -Nãoi funcionou
 
 
