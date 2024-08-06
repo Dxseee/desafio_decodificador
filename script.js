@@ -16,7 +16,8 @@ const  criptografar = () => {
         let cripO = cripA.replaceAll("o","ober");
         textCriptografado = cripO.replaceAll("u","ufat");
         
-        removerElements(textCriptografado);
+        mudarElements();
+        innerText(textCriptografado)
 
         console.log(textCriptografado);
         return textCriptografado;
@@ -34,14 +35,57 @@ function descriptografar(){
     let descripO = descripA.replaceAll("ober","o");
     textDescriptografado = descripO.replaceAll("ufat","u");
 
+    innerText(textDescriptografado)
     console.log(textDescriptografado);
     return textDescriptografado;
 
 }
 
-function removerElements(parametro){
-    let elementImagem = document.getElementById("imagem");
+function mudarElements(){
+    let elementDiv = document.getElementById("agrupamento");
+    elementDiv.classList.remove("container2__agrupamento");
+    elementDiv.classList.add("agrupamentoCriptografado");
 
+
+    let elementImagem = document.getElementById("imagem");
+    let criarElementTexto = document.createElement("textarea");
+    criarElementTexto.classList.add('h1TextoCriptografado');
+    criarElementTexto.setAttribute("rows","30");
+    criarElementTexto.setAttribute("placeholder","Nenhuma mensagem");
+    criarElementTexto.setAttribute("id","campoCriptografado")
+    elementImagem.replaceWith(criarElementTexto);
+
+    let elementDiv2 =  document.getElementById("agrupamentoCriptografado_botao");
+    elementDiv2.classList.remove("container2__agrupamento__textos");
+    elementDiv2.classList.add("criptografadoButton");
+
+
+    let elementTexto1= document.getElementById("texto1");
+    let criarElementButton =  document.createElement("button");
+    criarElementButton.classList.add("buttonCriado");
+    criarElementButton.innerHTML = "Copiar";
+    elementTexto1.replaceWith(criarElementButton);
+
+    let removerText = document.getElementById("texto2").remove();
+    
+
+    
+}
+
+function innerText(parametro){
+    let colocarTexto = document.getElementById("campoCriptografado");
+    colocarTexto.innerHTML = parametro;
+}
+
+/*Tentativa 1 -Nãoi funcionou
+
+
+    let elementDiv = document.getElementById("agrupamento");
+    let criarElementDiv = document.createElement("div");
+    criarElementDiv.classList.add('agrupamentoCriptografado');
+    elementDiv.replaceWith(criarElementDiv);
+
+    let elementImagem = document.getElementById("imagem");
     let criarElementTexto = document.createElement("textarea");
     criarElementTexto.classList.add('h1TextoCriptografado');
     criarElementTexto.innerHTML = parametro;
@@ -49,13 +93,39 @@ function removerElements(parametro){
     criarElementTexto.setAttribute("placeholder","Nenhuma mensagem");
     elementImagem.replaceWith(criarElementTexto);
 
+    let elementDiv2 =  document.getElementById("agrupamentoCriptografado_botao");
+    let criarElementDiv2 = document.createElement("div");
+    criarElementDiv.classList.add('criptografadoButton');
+    elementDiv2.replaceWith(criarElementDiv2);
+
+    let elementTexto1= document.getElementById("texto1");
     let criarElementButton =  document.createElement("button");
     criarElementButton.classList.add("buttonCriado");
     criarElementButton.innerHTML = "Copiar";
-
-    let elementTexto1= document.getElementById("texto1");
     elementTexto1.replaceWith(criarElementButton);
 
-    let elementTexto2= document.getElementById("texto2").remove();
-    
-}
+    let removerText = document.getElementById("texto2").remove();
+
+
+
+
+let elementImagem = document.getElementById("imagem");
+let criarElementTexto = document.createElement("textarea");
+criarElementTexto.classList.add('h1TextoCriptografado');
+criarElementTexto.innerHTML = parametro;
+criarElementTexto.setAttribute("row","15");
+criarElementTexto.setAttribute("placeholder","Nenhuma mensagem");
+containerAgrupamento.innerHTML = criarElementTexto;
+//elementImagem.replaceWith(criarElementTexto);
+
+
+let elementTexto1= document.getElementById("texto1");
+let criarElementButton =  document.createElement("button");
+criarElementButton.classList.add("buttonCriado");
+criarElementButton.innerHTML = "Copiar";
+//elementTexto1.replaceWith(criarElementButton);
+containerAgrupamento.innerHTML = criarElementButton;
+*/
+
+
+
