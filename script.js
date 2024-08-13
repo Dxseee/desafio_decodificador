@@ -19,10 +19,7 @@ const  criptografar = () => {
         mudarElements();
         innerText(textCriptografado)
 
-        console.log(textCriptografado);
         return textCriptografado;
-
-
     }
 
     
@@ -35,9 +32,7 @@ function descriptografar(){
     let descripO = descripA.replaceAll("ober","o");
     textDescriptografado = descripO.replaceAll("ufat","u");
 
-    innerText(textDescriptografado)
-    console.log(textDescriptografado);
-    return textDescriptografado;
+    innerText(textDescriptografado);
 
 }
 
@@ -76,7 +71,8 @@ function mudarElements(){
 
 function innerText(parametro){
     let colocarTexto = document.getElementById("campoCriptografado");
-    colocarTexto.innerHTML = parametro;
+    document.getElementById("campoTexto").value = "";
+    colocarTexto.value = parametro;
 }
 
 
@@ -85,7 +81,10 @@ function copyButton(){
     async function clipboardCopy() {
       await navigator.clipboard.writeText(textCriptografado);
     }
+    document.getElementById("campoCriptografado").value = "";
+
 }
+
 /*Tentativa 1 -Nãoi funcionou
 
 
