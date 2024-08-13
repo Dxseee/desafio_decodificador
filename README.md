@@ -12,8 +12,9 @@
 ![image](https://github.com/user-attachments/assets/d6ac0d4a-3f36-43f7-96ae-c0b1bb3b6d07)
 
 <h3 align="start" > Texto Criptografado</h3>
-![image](https://github.com/user-attachments/assets/9b7e5499-a069-4cd7-9b78-da51f34bb58c)
+![image](https://github.com/user-attachments/assets/998fe3c4-9b00-4181-a62c-4f92caed717d)
+
 
 <h3 align="start" > Texto Descriptografado</h3>
-![image](https://github.com/user-attachments/assets/92d309e2-123a-4984-9a6c-b9f597c1f924)
+
 
